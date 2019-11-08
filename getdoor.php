@@ -1,7 +1,5 @@
 <?php 
 include("db.php");
-echo "Here";
-exit();
 function getDoorStatus($conn){
 	$query = "SELECT * from iotdoor WHERE doornumber = 1;";
 	$result = mysqli_query($conn,$query) or die(mysql_error());
