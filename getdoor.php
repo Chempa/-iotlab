@@ -13,7 +13,7 @@ function getDoorStatus($conn){
 }
 
 $token = $_GET["token"];
-if($token == "IOTLAB.UCC.DOOR.1234567890.qwertyuiop.asdfghjkl.zxcvbnm.client"){
+if($token != "IOTLAB.UCC.DOOR.1234567890.qwertyuiop.asdfghjkl.zxcvbnm.client"){
 	echo "authentication failed: wrong token";
 	exit();
 }
