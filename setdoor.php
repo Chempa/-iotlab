@@ -7,7 +7,7 @@
 }
   $state = $_GET["opened"];
   $token = $_GET["token"];
-  if($token == "IOTLAB.UCC.DOOR.1234567890.qwertyuiop.asdfghjkl.zxcvbnm.server"){
+  if($token != "IOTLAB.UCC.DOOR.1234567890.qwertyuiop.asdfghjkl.zxcvbnm.server"){
     echo "authentication failed: wrong token";
     exit();
   }
