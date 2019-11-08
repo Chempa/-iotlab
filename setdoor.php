@@ -1,7 +1,5 @@
 <?php 
 include("db.php");
-echo "Hello";
-exit();
 function updateDoorStatus($conn,$opened){
 	$query = "UPDATE iotdoor SET opened = '$opened' WHERE doornumber = 1;";
 	$result = mysqli_query($conn,$query) or die(mysql_error());
@@ -13,7 +11,7 @@ if($token != "IOTLAB.UCC.DOOR.1234567890.qwertyuiop.asdfghjkl.zxcvbnm.client"){
 	echo "authentication failed: wrong token";
 	exit();
 }
-updateDoorStatus($con, $state)
+$ret = updateDoorStatus($con, $state)
 echo "success";
 exit();
 
