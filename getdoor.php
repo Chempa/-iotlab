@@ -5,7 +5,7 @@ function getDoorStatus($conn){
 	$result = mysqli_query($conn,$query) or die(mysql_error());
 	$rows = mysqli_num_rows($result);
 		if($row = mysqli_fetch_assoc($result)){
-			return strval($row["doornumber"]);
+			return strval($row["opened"]);
 		}else{
 			return "-1";
 		}
