@@ -1,5 +1,7 @@
 <?php 
 include("db.php");
+echo "Hello";
+exit();
 function updateDoorStatus($conn,$opened){
 	$query = "UPDATE iotdoor SET opened = '$opened' WHERE doornumber = 1;";
 	$result = mysqli_query($conn,$query) or die(mysql_error());
